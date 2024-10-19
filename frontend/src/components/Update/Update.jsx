@@ -23,7 +23,7 @@ const Update = () => {
 
     try {
 
-      const response = await axios.patch(`http://localhost:6600/cruduser/update/${id}`, {name ,phone, age},
+      const response = await axios.patch(`https://crudmernbackend-w9vd.onrender.com/cruduser/update/${id}`, {name ,phone, age},
         {
           withCredentials : true,
           headers : {
@@ -62,7 +62,7 @@ const Update = () => {
     const getuserbyIdAutoFill = async () =>{
        try {
 
-        const response = await axios.get(`http://localhost:6600/cruduser/getuser/${id}`)
+        const response = await axios.get(`https://crudmernbackend-w9vd.onrender.com/cruduser/getuser/${id}`)
         console.log(response.data);
         if (response.status === 200) {
           console.log(response.data.message);

@@ -16,7 +16,7 @@ const Create = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:6600/cruduser/create-user',
+        'https://crudmernbackend-w9vd.onrender.com/cruduser/create-user',
         { name, phone, age },
         {
           withCredentials: true,

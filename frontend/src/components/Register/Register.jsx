@@ -16,7 +16,7 @@ const RegisterForm = () => {
 
     try {
 
-      const response = await axios.post('http://localhost:6600/user/sginup',{name ,email, password});
+      const response = await axios.post('https://crudmernbackend-w9vd.onrender.com/user/sginup',{name ,email, password});
        console.log(response.data);
        
       if (response.status === 201) {

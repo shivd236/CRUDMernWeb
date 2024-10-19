@@ -9,7 +9,7 @@ const Read = () => {
 
   const fetchAllUserData = async () => {
     try {
-      const response = await axios.get('http://localhost:6600/cruduser/getall-user');
+      const response = await axios.get('https://crudmernbackend-w9vd.onrender.com/cruduser/getall-user');
       console.log(response.data);
       setData(response.data.result);
     } catch (error) {
@@ -24,7 +24,7 @@ const Read = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await axios.delete(`http://localhost:6600/cruduser/delete/${id}`, {
+      const response = await axios.delete(`https://crudmernbackend-w9vd.onrender.com/cruduser/delete/${id}`, {
         withCredentials: true,
         headers: {
           Authorization: `Bearer ${token}`,
