@@ -1,0 +1,105 @@
+.register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+
+body::-webkit-scrollbar {
+  width: 0.1px;
+  background-color: white;
+ 
+}
+
+
+.register-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+}
+
+.btnDiv{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.register-button4 {
+  width: 40%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button5 {
+  width: 40%;
+  padding: 12px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+
+
+.register-button4:hover {
+  background-color: #0056b3;
+  
+}
+
+.register-button5:hover {
+  background-color: red;
+  color: #fff;
+}
+
+
+.haveAcc {
+color: #555555;
+padding-top: 10px;
+text-align: center;
+}

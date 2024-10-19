@@ -1,0 +1,142 @@
+/* Container styling */
+.user-list-container {
+  max-width: 90%; /* Flexible width for smaller screens */
+  margin: 20px auto; /* Centered with reduced margin */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem; /* Adjusted font size */
+  color: #333;
+  font-family: 'Arial', sans-serif; /* Clean font for better readability */
+  letter-spacing: 0.5px; /* Slight letter spacing for better aesthetics */
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff; /* Added underline to the heading */
+}
+
+/* Table styling */
+.user-table {
+  width: 100%; /* Full width for better responsiveness */
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem; /* Standard font size */
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 10px; /* Adjusted padding */
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f0f0f0; /* Light grey header instead of bright blue */
+  color: #333; /* Darker text for better readability */
+  font-weight: bold;
+  text-transform: uppercase; /* Capitalized header text */
+  border-bottom: 2px solid #007bff; /* Subtle blue underline for a cleaner look */
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f7f7f7; /* Soft background for even rows */
+}
+
+.user-table tr:hover {
+  background-color: #e9ecef;
+}
+
+.user-table td {
+  color: #333;
+}
+
+/* Button styling */
+.btnEdit, .btnDel {
+  padding: 8px 14px; /* Adjusted padding */
+  font-size: 0.9rem; /* Button text size */
+  margin: 5px; /* Spacing between buttons */
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btnEdit {
+  background-color: #28a745; /* Brighter green */
+  color: white;
+}
+
+.btnEdit:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.btnDel {
+  background-color: #dc3545; /* Brighter red */
+  color: white;
+}
+
+.btnDel:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsive styling for small devices */
+@media (max-width: 768px) {
+  .user-list-container {
+    padding: 15px !important;
+  }
+
+  .user-table th, .user-table td {
+    padding: 8px !important;
+  }
+
+  .btnEdit, .btnDel {
+    font-size: 0.8rem !important;
+    padding: 6px 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-list-container h2 {
+    font-size: 1.5rem !important; /* Adjusted heading size for small screens */
+  }
+
+  .user-table th, .user-table td {
+    padding: 6px !important;
+    font-size: 0.9rem !important; /* Reduced font size */
+  }
+
+  .btnEdit, .btnDel {
+    font-size: 0.75rem !important; /* Smaller buttons on small devices */
+    padding: 5px 8px !important;
+  }
+
+  /* Stack the table on smaller screens */
+  .user-table, .user-table thead, .user-table tbody, .user-table th, .user-table td, .user-table tr {
+    display: block;
+  }
+
+  .user-table tr {
+    margin-bottom: 15px !important;
+  }
+
+  .user-table td {
+    text-align: right;
+    padding-left: 50% !important;
+    position: relative;
+  }
+
+  .user-table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px !important;
+    font-weight: bold;
+    text-align: left;
+  }
+}

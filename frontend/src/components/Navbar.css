@@ -1,0 +1,192 @@
+/* General styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* Left side of the navbar containing the brand */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+/* Company name styling */
+.company-name {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Right side of the navbar for the toggle button and login/logout buttons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Nav items styling */
+.nav-items {
+  display: flex;
+  width: 89%;
+  justify-content: flex-start;
+  padding-right: 20px;
+}
+
+.nav-item {
+  position: relative;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #f8f9fa; /* Light color for better readability on dark background */
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #007bff; /* Change color on hover for better interactivity */
+}
+
+/* Modern underline effect for the active page */
+.nav-item.active {
+  color: #007bff; /* Bright blue color for active text */
+  font-weight: bold; /* Make the active text bold for emphasis */
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Position the underline slightly below the text */
+  width: 95%;
+  height: 2px;
+  background-color: #007bff; /* Blue color for the underline */
+  border-radius: 2px; /* Smooth edges for the underline */
+  transform: scaleX(1);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-item:not(.active)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 95%;
+  height: 2px;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Login/logout button */
+.login-button,
+.logout-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.logout-button {
+  background-color: #dc3545;
+}
+
+.logout-button:hover {
+  background-color: #a71d2a;
+}
+
+/* Hamburger toggle button (right-aligned) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive styles for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show toggle button on smaller screens */
+    margin-left: auto; /* Move the hamburger icon to the right */
+    padding-right: 20px;
+  }
+
+  .navbar-right {
+    display: none; /* Hide the login/logout button on smaller screens */
+  }
+
+  .nav-item.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Position the underline slightly below the text */
+    width: 100%;
+    height: 2px;
+    background-color: #007bff; /* Blue color for the underline */
+    border-radius: 2px; /* Smooth edges for the underline */
+    transform: scaleX(1);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    
+  }
+
+  .nav-item:not(.active)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+  }
+
+  .nav-items {
+    display: none; /* Hide nav items by default on small screens */
+    flex-direction: column; /* Stack vertically when open */
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+  }
+
+  .nav-items.open {
+    display: flex; /* Show nav items when menu is open */
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+  }
+
+  /* Show login button inside the hamburger menu */
+  .login-button,
+  .logout-button {
+    display: block;
+    width: 100%; /* Full width for buttons on small screens */
+    margin: 5px 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+}

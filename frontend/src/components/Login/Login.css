@@ -1,0 +1,139 @@
+.register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+  background-color: #f0f0f0; /* Main background color */
+  padding: 20px; /* Prevent content from touching the edges on small screens */
+}
+
+/* Custom scrollbar styling */
+body::-webkit-scrollbar {
+  width: 0.1px;
+  background-color: white;
+}
+
+.register-form {
+  background-color: white; /* Background color of the login form */
+  padding: 30px; /* Inner padding for the form */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better visibility */
+  width: 100%; /* Make the form take the full width of its container */
+  max-width: 400px; /* Max width for larger screens */
+  transition: width 0.3s ease-in-out;
+  height: auto; /* Allow height to adjust based on content */
+  overflow: hidden; /* Prevent overflow in small devices */
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+}
+
+.btndiv {
+  display: flex;
+  flex-direction: column; /* Stack buttons on smaller screens */
+  gap: 10px; /* Space between buttons */
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.register-button2,
+.register-button3 {
+  width: 100%; /* Set width to 100% for buttons on smaller screens */
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button2 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.register-button3 {
+  background-color: transparent;
+  color: black;
+  border: 1.5px solid #ddd;
+}
+
+.register-button2:hover {
+  background-color: #0056b3;
+}
+
+.register-button3:hover {
+  background-color: red;
+  color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) { /* Mobile devices */
+  .register-form {
+    width: 90%; /* Use 90% width on mobile */
+    max-width: none; /* Remove max-width to allow full width */
+    margin: 0 10px; /* Add margin to ensure padding on sides */
+  }
+}
+
+@media (max-width: 325px) { /* Mobile devices */
+  .register-form-container {
+   padding: 20px 10px;
+  }
+
+  .register-form {
+    padding: 15px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablets */
+  .register-form {
+    width: 80%; /* Use 80% width on tablets */
+    max-width: 400px; /* Maintain max-width */
+    margin: 0 10px; /* Add margin for padding */
+  }
+
+  .btndiv {
+    flex-direction: row; /* Arrange buttons side by side */
+    justify-content: space-between; /* Space between buttons */
+  }
+
+  .register-button2,
+  .register-button3 {
+    width: 48%; /* Set width to 48% for side-by-side buttons */
+  }
+}
+
+@media (min-width: 1025px) { /* Desktops and larger screens */
+  .register-form {
+    width: 400px; /* Fixed width for desktop */
+  }
+}

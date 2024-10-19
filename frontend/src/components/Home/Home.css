@@ -1,0 +1,141 @@
+/* General container styling */
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #f5f5f5;
+  background-color: #1c1c1c;
+}
+
+/* Welcome banner styling */
+.welcome-banner {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome-banner h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.welcome-banner p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Project overview section styling */
+.project-overview-section {
+  margin-top: 30px;
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.project-overview-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.project-overview-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Features section styling */
+.features-section {
+  margin-top: 30px;
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.features-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.features-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features-section li {
+  margin: 8px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.features-section li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #61dafb; /* Light blue color */
+}
+
+/* Call-to-action buttons styling */
+.cta-buttons {
+  margin: 20px 0;
+}
+
+.cta-buttons button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Technologies section styling */
+.technologies-section {
+  margin-top: 40px;
+  background-color: #282c34;
+  padding: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  max-width: 800px;
+}
+
+.technologies-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  text-align: center;
+  margin: 10px;
+}
+
+.tech-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.tech-item p {
+  margin-top: 5px;
+  font-size: 1rem;
+}
