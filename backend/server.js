@@ -39,7 +39,7 @@ app.use('/', (req ,res)=>{
 })
 
 
-mongoose.connect(process.env.DBURL).then(()=>{
+mongoose.connect(process.env.DB_URL).then(()=>{
 
   app.listen(port,()=>{
     console.log("DB Connected successfully");
