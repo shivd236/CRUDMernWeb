@@ -6,6 +6,15 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 375px;
+
+}
+
+.createMainDiv {
+  min-height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .create-user-form h2 {
@@ -61,6 +70,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  flex-direction: row;
 }
 
 .submit-buttonupdate {

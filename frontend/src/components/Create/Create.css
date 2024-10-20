@@ -8,6 +8,15 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* Add transition for responsiveness */
   transition: max-width 0.3s ease-in-out;
+  width: 375px;
+  
+}
+
+.createMainDiv {
+  min-height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .create-user-form h2 {

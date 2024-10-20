@@ -92,6 +92,7 @@ const Update = () => {
 
   return (
 
+    <div className='createMainDiv'>
     <div className="create-user-form">
     <h2>Edit User</h2>
     <form onSubmit={handleSubmit}>
@@ -136,6 +137,7 @@ const Update = () => {
         <button type="button" className="back-buttonupdate" onClick={onCancelBtn}>Cancel</button>
       </div>
     </form>
+  </div>
   </div>
   )
 }

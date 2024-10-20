@@ -54,6 +54,7 @@ const Create = () => {
   };
 
   return (
+    <div className='createMainDiv'>
     <div className="create-user-form">
       <h2>Create User</h2>
       <form onSubmit={handleSubmit}>
@@ -98,6 +99,7 @@ const Create = () => {
           <button type="button" className="back-button" onClick={handleBack}>Back</button>
         </div>
       </form>
+    </div>
     </div>
   );
 };
