@@ -16,12 +16,12 @@ const AppRouter = () => (
   <Router>
     <Header />
     <Routes>
-      <Route path='home' element={<Home/>} />
-      <Route path='register' element={<RegisterForm/>} />
-      <Route path='login' element={<Login/>} />
-      <Route path='create' element={<Create/>} />
-      <Route path='read' element={<Read/>} />
-      <Route path='update/:id' element={<Update/>} />
+      <Route path='/home' element={<Home/>} />
+      <Route path='/register' element={<RegisterForm/>} />
+      <Route path='/login' element={<Login/>} />
+      <Route path='/create' element={<Create/>} />
+      <Route path='/read' element={<Read/>} />
+      <Route path='/update/:id' element={<Update/>} />
 
       <Route path='/' element={<Home/>} />
     

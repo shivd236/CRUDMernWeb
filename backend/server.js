@@ -24,7 +24,7 @@ app.use(express.json({
 }))
 
 app.use(cors({
-  origin: 'https://crudmernproject.netlify.app', // Your frontend URL
+  origin: 'https://crudmernweb.netlify.app', // Your frontend URL
   credentials: true 
 }));
 
